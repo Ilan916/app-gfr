@@ -11,3 +11,185 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #F2F3F2;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+}
+
+/* css header */
+
+.header {
+  padding: 14px 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-content img {
+  margin-bottom: 14px;
+}
+
+.header-title {
+  font-size: 16px;
+}
+
+/* css input container */
+
+.input-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding-top: 5px;
+  z-index: 999;
+}
+
+.textarea-vocal-container {
+  display: flex;
+  padding: 8px;
+  align-items: flex-end;
+  position: relative;
+}
+
+.input-container textarea:focus {
+  border: 1px solid #01ac9e;
+  outline: #01ac9e;
+}
+
+.input-container textarea:focus + button svg {
+  fill: #01ac9e;
+}
+
+.textarea-vocal-container button {
+  width: 50px;
+  border: none;
+  margin-left: 8px;
+  background-color: transparent;
+  position: absolute;
+  right: 8px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.textarea-vocal-container button svg {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  fill: #B2B2B2;
+}
+
+.input-container textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  overflow-y: hidden;
+  font-size: 14px;
+  height: 44px;
+  border-radius: 4px;
+  padding: 6px 55px 0 4px;
+  border: 1px solid #B2B2B2;
+  background-position: left 17px center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-size: 3.5%;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+#modify {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
+#modify img {
+  width: 30px;
+}
+
+.button.button-open-start {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
+.button.button-open-start img {
+  width: 30px;
+}
+
+.vocal-button-notrecording, .vocal-button-isrecording {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+
+.vocal-button-notrecording img{
+  width: 50px;
+}
+
+.conversation-history {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}
+
+.button-close {
+  top: 800px;
+  transition: .5s;
+  bottom: 0;
+}
+
+.button-open {
+  top: 110px;
+  transition: .5s;
+  bottom: 0;
+}
+
+.answer-container {
+  width: 94%;
+  height: 400px;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 14px;
+  padding-top: 60px;
+  text-align: center;
+}

@@ -1,38 +1,245 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #F2F3F2;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  background-color: #fff;
+  height: 64px;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-content {
+  margin: auto;
+  max-width: 680px;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* answer style */
+
+.answer-container {
+  max-width: 680px;
+  min-height: 250px;
+  background-color: #fff;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  justify-content: center;
+  position: relative;
+}
+
+.answer-container p {
+  font-weight: 500;
+}
+
+/* input style */
+
+.input-container {
+  max-width: 710px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 50px;
+  height: auto;
+  padding: 10px;
+}
+
+.input {
+  max-width: 680px;
+  padding: 14px;
+  width: 100%;
+  height: 52px;
+  background-position: left 17px center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-size: 3.5%;
+  resize: none;
+  border: 1px solid #B2B2B2;
+  border-radius: 4px;
+  font-size: 14px;
+  padding-bottom: 0;
+  overflow-y: hidden;
+}
+
+/* buttons style */
+
+.buttons-container {
+  width: 100%;
+  margin-top: 16px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #FF7B00;
+  border: none;
+  color: #fff;
+  min-width: 120px;
+  min-height: 50px;
+  font-weight: 700;
+  border-radius: 8px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: .2s;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  background-color: #E26212;
+  transition: .2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  font-size: 14px;
 }
+
+#back {
+  background-color: #fff;
+  border: 1px solid #FF7B00;
+  color: #FF7B00;
+  transition: .2s;
+}
+
+#back:hover {
+  border: 1px solid #E26212;
+  color: #E26212;
+  transition: .2s;
+}
+
+/* #back p{
+  margin-right: 14px;
+} */
+
+#modify {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  color: #004691;
+
+}
+
+#modify:hover {
+  color: #00356D;
+  text-decoration: underline;
+}
+
+#modify p{
+  font-weight: 600;
+}
+
+/* #next p{
+  margin-left: 14px;
+} */
+
+
+/* style historique de conversation */
+
+.conversation-history {
+  width: 60%;
+  height: 100%;
+  background-color: #ffff;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 8px -1px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+
+}
+
+.button-open {
+  right: 0;
+  transition: .5s;
+}
+
+.button-open-start {
+  width: 200px;
+}
+
+.button-close {
+  right: -100%;
+  transition: .5s;
+}
+
+.button-close-end {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.button-close button {
+  width: 200px;
+}
+
+.div-scroll-conrainer {
+  background-color: #F2F3F2;
+  margin-top: 30px;
+  width: 97%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  overflow: scroll;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.history-btn-container {
+  max-width: 710px;
+  margin: 20px auto;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.textarea-vocal-container {
+  display: flex;
+}
+
+.vocal-button-isrecording, .vocal-button-notrecording {
+  margin-left: 8px;
+  width: 80px;
+  height: 66px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vocal-button-isrecording {
+  background-color: #D85050;
+}
+
+.vocal-button-notrecording {
+  background-color: #01AC9E;
+}
+
+.vocal-button-notrecording:hover{
+  background-color: #018F7F;
+}
+
